@@ -25,7 +25,7 @@ export function Header() {
         <div className="flex items-center gap-2">
           <h1 className="text-xl md:text-3xl cursor-pointer transition-all duration-500 hover:scale-110 active:scale-95 px-4 py-2 rounded-xl hover:shadow-2xl hover:shadow-yellow-500/20 group">
             <span className="font-serif text-yellow-500 font-extrabold italic tracking-wider text-shadow-lg hover:text-yellow-400 transition-colors duration-300 group-hover:animate-pulse">
-              Pondicherry to Chennai
+              Pondicherry tO Chennai
             </span>
             <span className="font-sans text-cyan-500 ml-3 font-black not-italic tracking-widest hover:text-cyan-400 transition-all duration-300 group-hover:skew-x-3">
               TAXI
