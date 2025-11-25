@@ -1,35 +1,27 @@
-import express from 'express';
-import { fileURLToPath } from 'url';
-import { dirname, resolve } from 'path';
-import fs from 'fs';
+export default function handler(req, res) {
+  // Set CORS headers
+  res.setHeader('Access-Control-Allow-Origin', '*');
+  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = dirname(__filename);
+  if (req.method === 'OPTIONS') {
+    res.status(200).end();
+    return;
+  }
 
-const app = express();
+  if (req.url === '/api/health') {
+    res.status(200).json({ 
+      status: 'OK', 
+      message: 'SafeRidePro API is running',
+      timestamp: new Date().toISOString()
+    });
+    return;
+  }
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
-// API routes
-app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', message: 'SafeRidePro API is running' });
-});
-
-// Serve static files
-const distPath = resolve(__dirname, '..', 'dist', 'public');
-
-if (fs.existsSync(distPath)) {
-  app.use(express.static(distPath));
-  
-  // Catch-all handler for SPA
-  app.get('*', (req, res) => {
-    res.sendFile(resolve(distPath, 'index.html'));
-  });
-} else {
-  app.get('*', (req, res) => {
-    res.json({ message: 'SafeRidePro - Build files not found' });
+  // Default response for all other routes
+  res.status(200).json({ 
+    message: 'SafeRidePro Taxi Service',
+    status: 'active',
+    contact: '+91 80153 55460'
   });
 }
-
-export default app;
