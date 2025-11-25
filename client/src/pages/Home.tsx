@@ -5,10 +5,11 @@ import { PopularRoutes } from "@/components/PopularRoutes";
 import { TrustSection } from "@/components/TrustSection";
 import { BookingForm } from "@/components/BookingForm";
 import { Footer } from "@/components/Footer";
+import { FloatingActions } from "@/components/FloatingActions";
 
 export default function Home() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen relative">
       <Header />
       <Hero />
       <TrustSection />
@@ -16,6 +17,7 @@ export default function Home() {
       <PopularRoutes />
       <BookingForm />
       <Footer />
+      <FloatingActions />
     </div>
   );
 }

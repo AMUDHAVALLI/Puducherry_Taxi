@@ -17,11 +17,15 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
             <h3 className="text-xl font-black cursor-pointer transition-all duration-500 hover:scale-105 active:scale-95 px-2 py-1 rounded-xl hover:shadow-xl hover:shadow-yellow-500/20 group mb-4">
-              <span className="font-serif text-yellow-500 font-extrabold italic tracking-wider hover:text-yellow-400 transition-colors duration-300 group-hover:animate-pulse">
-                Pondicherry
+              <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 text-white font-extrabold px-3 py-1 rounded-2xl text-lg italic shadow-lg hover:shadow-xl transform hover:rotate-1 transition-all duration-300" style={{ fontFamily: 'serif', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
+                🚖 Pondicherry
               </span>
-              <span className="font-sans text-cyan-500 ml-3 font-black not-italic tracking-widest hover:text-cyan-400 transition-all duration-300 group-hover:skew-x-3">
-                ONEWAY TAXI
+              <br />
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 font-extrabold text-lg ml-0 italic animate-pulse" style={{ fontFamily: 'serif' }}>
+                to Chennai
+              </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 font-black text-lg tracking-widest animate-bounce ml-2" style={{ fontFamily: 'serif', animationDuration: '2s' }}>
+                T A X I ✨
               </span>
             </h3>
             <p className="text-sm text-muted-foreground mb-4">

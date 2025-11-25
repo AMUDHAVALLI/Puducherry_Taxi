@@ -93,8 +93,15 @@ export function BookingForm() {
     <section id="booking" className="py-20">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 uppercase tracking-wide">Book Your Taxi</h2>
-          <p className="text-lg md:text-xl text-muted-foreground font-medium">Fill in your details and get instant fare estimate</p>
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-extrabold mb-4 uppercase tracking-wide">
+            <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-red-500 text-transparent bg-clip-text animate-pulse">
+              Book Your
+            </span>
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-cyan-500 ml-4">
+              Taxi 🚖
+            </span>
+          </h2>
+          <p className="text-lg md:text-xl text-muted-foreground font-medium animate-fade-in">Fill in your details and get instant fare estimate ⚡</p>
         </div>
 
         <Card className="max-w-4xl mx-auto">
@@ -236,11 +243,12 @@ export function BookingForm() {
                   type="button"
                   variant="outline"
                   size="lg"
-                  className="flex-1 gap-2"
-                  onClick={() => window.open("https://wa.me/918015355460")}
+                  className="flex-1 gap-2 bg-green-50 hover:bg-green-100 border-green-200 hover:border-green-300"
+                  onClick={() => window.open("https://wa.me/918015355460", "_blank", "noopener,noreferrer")}
                   data-testid="button-whatsapp-booking"
                 >
                   <SiWhatsapp className="h-5 w-5 text-green-500" />
+                  Book via WhatsApp
                 </Button>
               </div>
             </form>
