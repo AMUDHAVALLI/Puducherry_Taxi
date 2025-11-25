@@ -96,9 +96,9 @@ export function Header() {
               <span className="hidden sm:inline">Book Now</span>
               <span className="sm:hidden">Book</span>
             </Button>
-            <span className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-red-500 text-white text-xs px-1 md:px-2 py-0.5 md:py-1 rounded-full animate-bounce">
+            {/* <span className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-red-500 text-white text-xs px-1 md:px-2 py-0.5 md:py-1 rounded-full">
               50% OFF
-            </span>
+            </span> */}
           </div>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
