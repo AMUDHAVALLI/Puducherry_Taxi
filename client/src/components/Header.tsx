@@ -20,19 +20,20 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-gradient-to-r from-background/95 via-primary/5 to-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 transition-all duration-500 hover:shadow-lg hover:shadow-primary/20">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 group">
-        <div className="flex items-center gap-2">
-          <h1 className="text-xl md:text-3xl cursor-pointer transition-all duration-500 hover:scale-110 active:scale-95 px-4 py-2 rounded-xl hover:shadow-2xl hover:shadow-yellow-500/20 group">
-            <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 text-white font-extrabold px-4 py-2 rounded-2xl text-lg md:text-2xl italic shadow-lg hover:shadow-xl transform hover:rotate-1 transition-all duration-300" style={{ fontFamily: 'serif', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
-              🚖 Pondicherry
-            </span>
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 font-extrabold text-lg md:text-2xl ml-2 italic animate-pulse" style={{ fontFamily: 'serif' }}>
-              to Chennai
-            </span>
-            <br className="block md:hidden" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 font-black text-xl md:text-3xl tracking-widest animate-bounce" style={{ fontFamily: 'serif', animationDuration: '2s' }}>
-              T A X I ✨
-            </span>
+      <div className="container mx-auto flex h-20 md:h-16 items-center justify-between px-2 md:px-4 group">
+        <div className="flex items-center gap-1 flex-1 min-w-0">
+          <h1 className="cursor-pointer transition-all duration-500 hover:scale-110 active:scale-95 px-1 md:px-4 py-1 md:py-2 rounded-xl hover:shadow-2xl hover:shadow-yellow-500/20 group">
+            <div className="flex flex-wrap items-center gap-1 md:gap-2">
+              <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 text-white font-extrabold px-2 md:px-4 py-1 md:py-2 rounded-2xl text-xs md:text-2xl italic shadow-lg hover:shadow-xl transform hover:rotate-1 transition-all duration-300" style={{ fontFamily: 'serif', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
+                🚖 Pondicherry
+              </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 font-extrabold text-xs md:text-2xl italic animate-pulse" style={{ fontFamily: 'serif' }}>
+                to Chennai
+              </span>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 font-black text-xs md:text-3xl tracking-wider md:tracking-widest animate-bounce" style={{ fontFamily: 'serif', animationDuration: '2s' }}>
+                TAXI ✨
+              </span>
+            </div>
           </h1>
         </div>
 
@@ -67,7 +68,7 @@ export function Header() {
           </button>
         </nav>
 
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-1 md:gap-3 flex-shrink-0">
           <Button
             variant="ghost"
             size="icon"
@@ -89,12 +90,13 @@ export function Header() {
           <div className="relative">
             <Button
               onClick={() => scrollToSection("booking")}
-              className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95 font-bold"
+              className="bg-gradient-to-r from-primary to-accent hover:from-accent hover:to-primary transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-95 font-bold text-xs md:text-sm px-2 md:px-4 py-1 md:py-2"
               data-testid="button-book-now"
             >
-              Book Now
+              <span className="hidden sm:inline">Book Now</span>
+              <span className="sm:hidden">Book</span>
             </Button>
-            <span className="absolute -top-2 -right-2 bg-red-500 text-white text-xs px-2 py-1 rounded-full animate-bounce">
+            <span className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-red-500 text-white text-xs px-1 md:px-2 py-0.5 md:py-1 rounded-full animate-bounce">
               50% OFF
             </span>
           </div>
