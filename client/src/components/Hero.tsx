@@ -6,10 +6,15 @@ import { Car, MapPin, Plane, Navigation, Phone } from "lucide-react";
 import { SiWhatsapp } from "react-icons/si";
 
 export function Hero() {
-  const scrollToBooking = () => {
+  const scrollToBooking = (serviceType?: string) => {
     const element = document.getElementById("booking");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+      if (serviceType) {
+        setTimeout(() => {
+          window.dispatchEvent(new CustomEvent('selectServiceType', { detail: serviceType }));
+        }, 500);
+      }
     }
   };
 
@@ -87,7 +92,7 @@ export function Hero() {
                 <Card
                   key={service.id}
                   className="p-4 bg-white/10 backdrop-blur-md border-white/20 hover-elevate active-elevate-2 cursor-pointer transition-all"
-                  onClick={scrollToBooking}
+                  onClick={() => scrollToBooking(service.id)}
                   data-testid={`card-service-${service.id}`}
                 >
                   <Icon className="h-8 w-8 text-white mb-2 mx-auto" />
