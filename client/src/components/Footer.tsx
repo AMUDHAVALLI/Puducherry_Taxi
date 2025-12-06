@@ -87,7 +87,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <SiWhatsapp className="h-4 w-4 mt-1 text-green-500" />
-                <a href="https://wa.me/919500972091" className="text-sm text-muted-foreground hover:text-primary">
+                <a href="https://wa.me/918015355460" className="text-sm text-muted-foreground hover:text-primary">
                   WhatsApp Us
                 </a>
               </li>

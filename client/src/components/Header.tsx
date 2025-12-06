@@ -87,7 +87,7 @@ export function Header() {
             variant="ghost"
             size="icon"
             className="hidden md:flex hover:bg-green-100 transition-all duration-300 hover:scale-110 hover:rotate-12 active:scale-95"
-            onClick={() => window.open("https://wa.me/919500972091", "_blank", "noopener,noreferrer")}
+            onClick={() => window.open("https://wa.me/918015355460", "_blank", "noopener,noreferrer")}
             data-testid="button-whatsapp"
           >
             <SiWhatsapp className="h-5 w-5 text-green-500 hover:text-green-600" />

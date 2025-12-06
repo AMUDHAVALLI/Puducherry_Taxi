@@ -47,7 +47,7 @@ export function Hero() {
         <Button
           size="icon"
           className="h-16 w-16 rounded-full bg-green-500 hover:bg-green-600 shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 animate-pulse"
-          onClick={() => window.open("https://wa.me/919500972091", "_blank", "noopener,noreferrer")}
+          onClick={() => window.open("https://wa.me/918015355460", "_blank", "noopener,noreferrer")}
         >
           <SiWhatsapp className="h-8 w-8 text-white" />
         </Button>

@@ -164,7 +164,7 @@ export function BookingForm() {
     if (note) messageLines.push(`*Notes:* ${note}`);
     
     const message = messageLines.join("\n");
-    const whatsappNumber = "919500972091";
+    const whatsappNumber = "918015355460";
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
     
     window.open(whatsappUrl, "_blank", "noopener,noreferrer");
@@ -227,10 +227,14 @@ export function BookingForm() {
                   <Input 
                     id="phone" 
                     type="tel" 
-                    placeholder="+91 80153 55460" 
+                    placeholder="Enter your WhatsApp number" 
                     data-testid="input-phone"
                     value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
+                    onChange={(e) => {
+                      const value = e.target.value.replace(/\D/g, '');
+                      setPhone(value);
+                    }}
+                    maxLength={10}
                     required
                   />
                 </div>
