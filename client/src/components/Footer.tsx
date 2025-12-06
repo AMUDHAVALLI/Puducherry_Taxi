@@ -18,11 +18,11 @@ export function Footer() {
           <div>
             <h3 className="text-xl font-black cursor-pointer transition-all duration-500 hover:scale-105 active:scale-95 px-2 py-1 rounded-xl hover:shadow-xl hover:shadow-yellow-500/20 group mb-4">
               <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 text-white font-extrabold px-3 py-1 rounded-2xl text-lg italic shadow-lg hover:shadow-xl transform hover:rotate-1 transition-all duration-300" style={{ fontFamily: 'serif', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
-                🚖 Pondicherry
+                🚖 Chennai
               </span>
               <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 font-extrabold text-lg ml-0 italic animate-pulse" style={{ fontFamily: 'serif' }}>
-                to Chennai
+                to Pondicherry
               </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 font-black text-lg tracking-widest animate-bounce ml-2" style={{ fontFamily: 'serif', animationDuration: '2s' }}>
                 T A X I ✨
@@ -87,7 +87,7 @@ export function Footer() {
               </li>
               <li className="flex items-start gap-2">
                 <SiWhatsapp className="h-4 w-4 mt-1 text-green-500" />
-                <a href="https://wa.me/918015355460" className="text-sm text-muted-foreground hover:text-primary">
+                <a href="https://wa.me/919500972091" className="text-sm text-muted-foreground hover:text-primary">
                   WhatsApp Us
                 </a>
               </li>

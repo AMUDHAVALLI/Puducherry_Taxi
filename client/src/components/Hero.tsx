@@ -2,7 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card } from "@/components/ui/card";
 import heroImage from "@assets/generated_images/Chennai_Marina_Beach_hero_eb5c64a0.png";
-import { Car, MapPin, Plane, Navigation } from "lucide-react";
+import { Car, MapPin, Plane, Navigation, Phone } from "lucide-react";
+import { SiWhatsapp } from "react-icons/si";
 
 export function Hero() {
   const scrollToBooking = () => {
@@ -41,6 +42,28 @@ export function Hero() {
 
   return (
     <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden">
+      {/* WhatsApp Button - Left Side */}
+      <div className="fixed left-4 top-1/2 -translate-y-1/2 z-40">
+        <Button
+          size="icon"
+          className="h-16 w-16 rounded-full bg-green-500 hover:bg-green-600 shadow-2xl hover:shadow-green-500/50 transition-all duration-300 hover:scale-110 animate-pulse"
+          onClick={() => window.open("https://wa.me/919500972091", "_blank", "noopener,noreferrer")}
+        >
+          <SiWhatsapp className="h-8 w-8 text-white" />
+        </Button>
+      </div>
+
+      {/* Call Button - Right Side */}
+      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-40">
+        <Button
+          size="icon"
+          className="h-16 w-16 rounded-full bg-blue-500 hover:bg-blue-600 shadow-2xl hover:shadow-blue-500/50 transition-all duration-300 hover:scale-110 hover:rotate-12"
+          onClick={() => window.open("tel:+918015355460")}
+        >
+          <Phone className="h-7 w-7 text-white" />
+        </Button>
+      </div>
+
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{ backgroundImage: `url(${heroImage})` }}

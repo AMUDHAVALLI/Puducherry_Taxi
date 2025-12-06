@@ -7,11 +7,16 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 export function Header() {
   const [isOpen, setIsOpen] = useState(false);
 
-  const scrollToSection = (id: string) => {
+  const scrollToSection = (id: string, serviceType?: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
       setIsOpen(false);
+      if (serviceType) {
+        setTimeout(() => {
+          window.dispatchEvent(new CustomEvent('selectServiceType', { detail: serviceType }));
+        }, 500);
+      }
     }
   };
 
@@ -25,10 +30,10 @@ export function Header() {
           <h1 className="cursor-pointer transition-all duration-500 hover:scale-110 active:scale-95 px-1 md:px-4 py-1 md:py-2 rounded-xl hover:shadow-2xl hover:shadow-yellow-500/20 group">
             <div className="flex flex-wrap items-center gap-1 md:gap-2">
               <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 text-white font-extrabold px-2 md:px-4 py-1 md:py-2 rounded-2xl text-xs md:text-2xl italic shadow-lg hover:shadow-xl transform hover:rotate-1 transition-all duration-300" style={{ fontFamily: 'serif', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
-                🚖 Pondicherry
+                🚖 Chennai
               </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 font-extrabold text-xs md:text-2xl italic animate-pulse" style={{ fontFamily: 'serif' }}>
-                to Chennai
+                to Pondicherry
               </span>
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 font-black text-xs md:text-3xl tracking-wider md:tracking-widest animate-bounce" style={{ fontFamily: 'serif', animationDuration: '2s' }}>
                 TAXI ✨
@@ -39,7 +44,7 @@ export function Header() {
 
         <nav className="hidden md:flex items-center gap-2">
           <button
-            onClick={() => scrollToSection("services")}
+            onClick={() => scrollToSection("booking")}
             className={navButtonClass}
             data-testid="link-services"
           >
@@ -82,7 +87,7 @@ export function Header() {
             variant="ghost"
             size="icon"
             className="hidden md:flex hover:bg-green-100 transition-all duration-300 hover:scale-110 hover:rotate-12 active:scale-95"
-            onClick={() => window.open("https://wa.me/918015355460", "_blank", "noopener,noreferrer")}
+            onClick={() => window.open("https://wa.me/919500972091", "_blank", "noopener,noreferrer")}
             data-testid="button-whatsapp"
           >
             <SiWhatsapp className="h-5 w-5 text-green-500 hover:text-green-600" />
@@ -96,9 +101,7 @@ export function Header() {
               <span className="hidden sm:inline">Book Now</span>
               <span className="sm:hidden">Book</span>
             </Button>
-            {/* <span className="absolute -top-1 -right-1 md:-top-2 md:-right-2 bg-red-500 text-white text-xs px-1 md:px-2 py-0.5 md:py-1 rounded-full">
-              50% OFF
-            </span> */}
+
           </div>
 
           <Sheet open={isOpen} onOpenChange={setIsOpen}>
@@ -115,7 +118,7 @@ export function Header() {
             <SheetContent>
               <nav className="flex flex-col gap-4 mt-8">
                 <button
-                  onClick={() => scrollToSection("services")}
+                  onClick={() => scrollToSection("booking")}
                   className={mobileNavButtonClass}
                   data-testid="mobile-link-services"
                 >
