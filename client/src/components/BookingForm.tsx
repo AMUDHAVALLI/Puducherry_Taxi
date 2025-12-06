@@ -33,8 +33,8 @@ export function BookingForm() {
   const { toast } = useToast();
 
   const vehicles = [
-    { id: "swift", name: "Maruti Swift", capacity: "4 Seater", price: "₹12/km" },
-    { id: "etios", name: "Toyota Etios", capacity: "4 Seater", price: "₹13/km" },
+    // { id: "swift", name: "Maruti Swift", capacity: "4 Seater", price: "₹12/km" },
+    { id: "etios", name: "Toyota Etios", capacity: "4 Seater", price: "₹14/km" },
     { id: "ertiga", name: "Maruti Ertiga",capacity: "6-7 Seater", price: "₹18/km" },
     { id: "tempo", name: "Tempo Traveller", capacity: "12-17 Seater", price: "₹26/km" }
   ];

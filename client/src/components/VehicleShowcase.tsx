@@ -6,18 +6,18 @@ import tempoImg from "@assets/generated_images/Tempo_traveller_showcase_f765b583
 
 export function VehicleShowcase() {
   const vehicles = [
-    {
-      name: "Maruti Swift",
-      image: swiftImg,
-      roundTripRate: "₹12/km",
-      oneWayRate: "₹14/km",
-      capacity: 4,
-      description: "Compact yet comfortable AC cars that seat up to 4 people and give you good travel experience",
-    },
+    // {
+    //   name: "Maruti Swift",
+    //   image: swiftImg,
+    //   roundTripRate: "₹12/km",
+    //   oneWayRate: "₹14/km",
+    //   capacity: 4,
+    //   description: "Compact yet comfortable AC cars that seat up to 4 people and give you good travel experience",
+    // },
     {
       name: "Toyota Etios",
       image: etiosImg,
-      roundTripRate: "₹13/km",
+      roundTripRate: "₹14/km",
       oneWayRate: "₹15/km",
       capacity: 4,
       description: "Top rated drivers, and best cars with extra legroom and boot space",
