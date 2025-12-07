@@ -29,13 +29,13 @@ export function Header() {
         <div className="flex items-center gap-1 flex-1 min-w-0">
           <h1 className="cursor-pointer transition-all duration-500 hover:scale-110 active:scale-95 px-1 md:px-4 py-1 md:py-2 rounded-xl hover:shadow-2xl hover:shadow-yellow-500/20 group">
             <div className="flex flex-wrap items-center gap-1 md:gap-2">
-              <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 text-white font-extrabold px-2 md:px-4 py-1 md:py-2 rounded-2xl text-xs md:text-2xl italic shadow-lg hover:shadow-xl transform hover:rotate-1 transition-all duration-300" style={{ fontFamily: 'serif', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
+              <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 text-white font-black px-2 md:px-4 py-1 md:py-2 rounded-2xl text-sm md:text-3xl italic shadow-2xl hover:shadow-3xl transform hover:rotate-1 transition-all duration-300" style={{ fontFamily: 'serif', textShadow: '3px 3px 6px rgba(0,0,0,0.5)', fontWeight: 900 }}>
                 🚖 Chennai
               </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 font-extrabold text-xs md:text-2xl italic animate-pulse" style={{ fontFamily: 'serif' }}>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 font-black text-sm md:text-3xl italic animate-pulse" style={{ fontFamily: 'serif', fontWeight: 900, WebkitTextStroke: '0.5px rgba(0,150,255,0.3)' }}>
                 to Pondicherry
               </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 font-black text-xs md:text-3xl tracking-wider md:tracking-widest animate-bounce" style={{ fontFamily: 'serif', animationDuration: '2s' }}>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 font-black text-sm md:text-4xl tracking-wider md:tracking-widest animate-bounce" style={{ fontFamily: 'serif', animationDuration: '2s', fontWeight: 900, WebkitTextStroke: '0.5px rgba(100,0,255,0.3)' }}>
                 TAXI ✨
               </span>
             </div>

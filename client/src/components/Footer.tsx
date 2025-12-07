@@ -3,7 +3,12 @@ import { SiWhatsapp, SiFacebook, SiInstagram, SiX } from "react-icons/si";
 import { Button } from "@/components/ui/button";
 
 export function Footer() {
-  const services = ["Local Rental", "Outstation Ride", "City Ride", "Airport Transfer"];
+  const services = [
+    { name: "Local Rental", type: "local" },
+    { name: "Outstation Ride", type: "outstation" },
+    { name: "City Ride", type: "city" },
+    { name: "Airport Transfer", type: "airport" }
+  ];
   const popularRoutes = [
     "Chennai to Pondicherry",
     "Chennai to Bangalore",
@@ -11,20 +16,30 @@ export function Footer() {
     "Chennai to Tirupati",
   ];
 
+  const handleServiceClick = (serviceType: string) => {
+    const element = document.getElementById("booking");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        window.dispatchEvent(new CustomEvent('selectServiceType', { detail: serviceType }));
+      }, 500);
+    }
+  };
+
   return (
     <footer className="bg-muted/50 border-t mt-20">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div>
-            <h3 className="text-xl font-black cursor-pointer transition-all duration-500 hover:scale-105 active:scale-95 px-2 py-1 rounded-xl hover:shadow-xl hover:shadow-yellow-500/20 group mb-4">
-              <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 text-white font-extrabold px-3 py-1 rounded-2xl text-lg italic shadow-lg hover:shadow-xl transform hover:rotate-1 transition-all duration-300" style={{ fontFamily: 'serif', textShadow: '2px 2px 4px rgba(0,0,0,0.3)' }}>
+            <h3 className="text-xl font-black cursor-pointer transition-all duration-500 hover:scale-105 active:scale-95 px-2 py-1 rounded-xl hover:shadow-2xl hover:shadow-yellow-500/20 group mb-4">
+              <span className="bg-gradient-to-r from-yellow-400 via-orange-500 to-yellow-600 text-white font-black px-3 py-1 rounded-2xl text-xl italic shadow-2xl hover:shadow-3xl transform hover:rotate-1 transition-all duration-300" style={{ fontFamily: 'serif', textShadow: '3px 3px 6px rgba(0,0,0,0.5)', fontWeight: 900 }}>
                 🚖 Chennai
               </span>
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 font-extrabold text-lg ml-0 italic animate-pulse" style={{ fontFamily: 'serif' }}>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-cyan-600 font-black text-xl ml-0 italic animate-pulse" style={{ fontFamily: 'serif', fontWeight: 900, WebkitTextStroke: '0.5px rgba(0,150,255,0.3)' }}>
                 to Pondicherry
               </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 font-black text-lg tracking-widest animate-bounce ml-2" style={{ fontFamily: 'serif', animationDuration: '2s' }}>
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 via-purple-500 to-blue-600 font-black text-2xl tracking-widest animate-bounce ml-2" style={{ fontFamily: 'serif', animationDuration: '2s', fontWeight: 900, WebkitTextStroke: '0.5px rgba(100,0,255,0.3)' }}>
                 T A X I ✨
               </span>
             </h3>
@@ -48,10 +63,10 @@ export function Footer() {
             <h4 className="font-semibold mb-4">Services</h4>
             <ul className="space-y-2">
               {services.map((service) => (
-                <li key={service}>
-                  <a href="#services" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                    {service}
-                  </a>
+                <li key={service.name}>
+                  <button onClick={() => handleServiceClick(service.type)} className="text-sm text-muted-foreground hover:text-primary transition-colors cursor-pointer">
+                    {service.name}
+                  </button>
                 </li>
               ))}
             </ul>

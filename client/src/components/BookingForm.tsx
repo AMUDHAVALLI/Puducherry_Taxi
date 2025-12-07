@@ -199,11 +199,11 @@ export function BookingForm() {
         <Card className="max-w-4xl mx-auto">
           <CardHeader>
             <Tabs value={bookingType} onValueChange={setBookingType} className="w-full">
-              <TabsList className="grid w-full grid-cols-4">
-                <TabsTrigger value="local" data-testid="tab-local">Local Rental</TabsTrigger>
-                <TabsTrigger value="outstation" data-testid="tab-outstation">Outstation</TabsTrigger>
-                <TabsTrigger value="city" data-testid="tab-city">City Ride</TabsTrigger>
-                <TabsTrigger value="airport" data-testid="tab-airport">Airport</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 gap-2 h-auto p-1">
+                <TabsTrigger value="local" data-testid="tab-local" className="text-xs sm:text-sm px-2 py-2.5">Local Rental</TabsTrigger>
+                <TabsTrigger value="outstation" data-testid="tab-outstation" className="text-xs sm:text-sm px-2 py-2.5">Outstation</TabsTrigger>
+                <TabsTrigger value="city" data-testid="tab-city" className="text-xs sm:text-sm px-2 py-2.5">City Ride</TabsTrigger>
+                <TabsTrigger value="airport" data-testid="tab-airport" className="text-xs sm:text-sm px-2 py-2.5">Airport</TabsTrigger>
               </TabsList>
             </Tabs>
           </CardHeader>
@@ -389,7 +389,7 @@ export function BookingForm() {
               <div className="space-y-2">
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Service Type:</span>
-                  <span className="font-medium">{bookingType.charAt(0).toUpperCase() + bookingType.slice(1)}</span>
+                  <span className="font-medium">{typeof bookingType === 'string' ? bookingType.charAt(0).toUpperCase() + bookingType.slice(1) : 'Outstation'}</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-muted-foreground">Date & Time:</span>
