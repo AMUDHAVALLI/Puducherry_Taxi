@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://AMUDHAVALLI.github.io/Puducherry_Taxi/sitemap.xml
