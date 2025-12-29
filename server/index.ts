@@ -36,6 +36,23 @@ app.use((req, res, next) => {
   next();
 });
 
+import path from "path";
+app.get("/sitemap.xml", (_req, res) => {
+  const sitemapPath = process.env.NODE_ENV === "production"
+    ? path.resolve(process.cwd(), "dist", "public", "sitemap.xml")
+    : path.resolve(process.cwd(), "client", "public", "sitemap.xml");
+  res.setHeader("Content-Type", "application/xml");
+  res.sendFile(sitemapPath);
+});
+
+app.get("/robots.txt", (_req, res) => {
+  const robotsPath = process.env.NODE_ENV === "production"
+    ? path.resolve(process.cwd(), "dist", "public", "robots.txt")
+    : path.resolve(process.cwd(), "client", "public", "robots.txt");
+  res.setHeader("Content-Type", "text/plain");
+  res.sendFile(robotsPath);
+});
+
 (async () => {
   const server = await registerRoutes(app);
 
