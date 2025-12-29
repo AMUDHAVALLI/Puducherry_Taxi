@@ -11,7 +11,7 @@ interface SEOProps {
 export default function SEO({ 
   title, 
   description, 
-  name = "Puducherry Taxi Service", 
+  name = "Chennai to Pondicherry Taxi", 
   type = "website",
   keywords
 }: SEOProps) {

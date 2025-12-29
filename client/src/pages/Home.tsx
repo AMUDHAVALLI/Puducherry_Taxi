@@ -13,35 +13,36 @@ export default function Home() {
   return (
     <div className="min-h-screen relative">
       <SEO 
-        title="Best Taxi Service in Puducherry | SafeRidePro"
-        description="Book the best taxi service in Puducherry with SafeRidePro. Reliable outstation cabs, airport transfers, and local sightseeing at affordable rates. 24/7 customer support."
-        keywords="puducherry taxi service, pondicherry cab booking, outstation taxi puducherry, chennai to pondicherry taxi, airport pickup pondicherry"
+        title="Chennai to Pondicherry Taxi - Trusted Cab & Car Rental Services"
+        description="Book reliable taxi and cab services from Chennai to Pondicherry. Outstation trips, local rentals, airport transfers. 24/7 service, verified drivers, transparent pricing. Call +91 80153 55460"
+        keywords="Chennai to Pondicherry taxi, Chennai Pondicherry cab, outstation taxi Chennai, car rental Chennai, airport taxi Chennai, local taxi rental, Chennai cab service, Pondicherry taxi booking"
       />
       <Helmet>
         <script type="application/ld+json">
           {JSON.stringify({
             "@context": "https://schema.org",
             "@type": "TaxiService",
-            "name": "SafeRidePro",
-            "image": "https://AMUDHAVALLI.github.io/Puducherry_Taxi/og-image.jpg",
-            "description": "Professional taxi service in Puducherry offering outstation cabs, airport transfers, and local sightseeing.",
+            "name": "Chennai to Pondicherry Taxi",
+            "image": "https://chennaipondicherrytaxi.com/og-image.jpg",
+            "description": "Book reliable taxi services from Chennai to Pondicherry. Outstation trips, local rentals, airport transfers with verified drivers and transparent pricing.",
             "address": {
               "@type": "PostalAddress",
-              "addressLocality": "Puducherry",
-              "addressRegion": "PY",
+              "addressLocality": "Chennai",
+              "addressRegion": "TN",
               "addressCountry": "IN"
             },
             "geo": {
               "@type": "GeoCoordinates",
-              "latitude": "11.9416",
-              "longitude": "79.8083"
+              "latitude": "13.0827",
+              "longitude": "80.2707"
             },
-            "url": "https://AMUDHAVALLI.github.io/Puducherry_Taxi/",
-            "telephone": "+919018540000",
-            "priceRange": "$$"
+            "url": "https://chennaipondicherrytaxi.com/",
+            "telephone": "+918015355460",
+            "priceRange": "₹₹"
           })}
         </script>
       </Helmet>
+
       <Header />
       <Hero />
       <TrustSection />
